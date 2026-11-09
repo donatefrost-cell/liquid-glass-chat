@@ -43,7 +43,7 @@ export default function LiquidGlassChatPage() {
 
   const [theme, setTheme] = useState<ThemeMode>("dark");
   const [refractionEnabled, setRefractionEnabled] = useState(true);
-  const [modelName, setModelName] = useState("gemini-2.5-flash");
+  const [modelName, setModelName] = useState("gemini-3.8-flash");
 
   const [isSidebarOpenDesktop, setIsSidebarOpenDesktop] = useState(true);
   const [isSidebarOpenMobile, setIsSidebarOpenMobile] = useState(false);

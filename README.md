@@ -60,8 +60,8 @@ cp .env.example .env.local
 # Секретный серверный ключ Google Gemini API
 GEMINI_API_KEY=ваш_ключ_здесь
 
-# Модель Gemini (по умолчанию: gemini-2.5-flash)
-GEMINI_MODEL=gemini-2.5-flash
+# Модель Gemini (по умолчанию: gemini-3.8-flash)
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
 > **Безопасность:** Никогда не добавляйте префикс `NEXT_PUBLIC_` к `GEMINI_API_KEY`. Ключ читается исключительно на сервере внутри `app/api/chat/route.ts` и никогда не передаётся в браузер.
@@ -112,7 +112,7 @@ git push -u origin main
 | Name | Value | Environments |
 | :--- | :--- | :--- |
 | `GEMINI_API_KEY` | *(ваш секретный ключ Gemini API)* | Production, Preview, Development |
-| `GEMINI_MODEL` | `gemini-2.5-flash` | Production, Preview, Development |
+| `GEMINI_MODEL` | `gemini-3.8-flash` | Production, Preview, Development |
 
 ### Шаг 4. Деплой и проверка
 1. Нажмите **Deploy** и дождитесь завершения сборки (~40–60 секунд).

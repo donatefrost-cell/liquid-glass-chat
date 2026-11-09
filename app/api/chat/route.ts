@@ -9,7 +9,7 @@ import { ChatApiRequest } from "@/lib/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.8-flash";
 
 const SYSTEM_INSTRUCTION = `Ты — Vitro AI, интеллектуальный ассистент нового поколения в оптическом интерфейсе Liquid Glass.
 Отвечай точно, структурированно и по делу. Используй аккуратный Markdown (заголовки, списки, таблицы, блоки кода с указанием языка), когда это улучшает читаемость.
@@ -128,7 +128,13 @@ export async function POST(req: NextRequest) {
 
     const configuredModel = process.env.GEMINI_MODEL?.trim() || DEFAULT_MODEL;
     const candidateModels = Array.from(
-      new Set([configuredModel, "gemini-2.5-flash", "gemini-2.0-flash"])
+      new Set([
+        configuredModel,
+        "gemini-3.8-flash",
+        "gemini-3.5-flash",
+        "gemini-3-flash",
+        "gemini-2.5-flash",
+      ])
     );
 
     const payload = {
